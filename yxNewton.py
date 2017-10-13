@@ -78,8 +78,14 @@ class YxNewton(object):
             newton = newton + cha_fen_list[index + 1] * kuohao
             kuohao = kuohao * (x - xi)
         return newton
-
+'''
+#example
 my_dict = {0.40:0.41075, 0.55:0.57815, 0.65:0.69675, 0.80:0.88811, 0.90:1.02652, 1.05:1.25382}
 ac = YxNewton(my_dict)
-
+#Valuation
 print(ac.yxnewton(1.05))
+#error estimation
+print(ac.newton_error(1.3))
+#show lozenge diagram
+ac.show_big_list()
+'''
